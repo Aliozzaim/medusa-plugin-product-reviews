@@ -1,0 +1,35 @@
+{
+  "name": "@ozzaim/medusa-plugin-product-reviews",
+  "version": "1.0.0",
+  "description": "A product review plugin for Medusa v1 that allows customers to leave reviews and ratings for products.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.ts",
+    "./admin": "./admin/index.tsx"
+  },
+  "files": [
+    "dist",
+    "admin"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "keywords": [
+    "medusa",
+    "plugin",
+    "ecommerce",
+    "reviews"
+  ],
+  "author": "AliOzzaim <aliozzaim788@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@medusajs/medusa": "^1.13.4",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "@types/node": "^20.11.30"
+  }
+}
