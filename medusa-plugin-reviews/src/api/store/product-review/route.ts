@@ -54,7 +54,7 @@ export const GET = async (req: MedusaRequest, res: MedusaResponse) => {
     console.error("Error fetching product reviews:", error);
     res.status(500).json({
       message: "Internal server error",
-      error: error.message,
+      error: error instanceof Error ? error.message : String(error),
     });
   }
 };
