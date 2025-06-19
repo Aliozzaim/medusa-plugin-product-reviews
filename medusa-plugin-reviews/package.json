@@ -1,6 +1,6 @@
 {
   "name": "@ozzaim/medusa-plugin-product-reviews",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A product review plugin for Medusa v1 that allows customers to leave reviews and ratings for products, including optional admin UI.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
