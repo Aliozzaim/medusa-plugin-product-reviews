@@ -2,6 +2,11 @@ import { MigrationInterface, QueryRunner, Table } from "typeorm";
 
 export class CreateProductReview1685312235425 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
+    const tableExists = await queryRunner.hasTable("product_review");
+    if (tableExists) {
+      console.log("Table 'product_review' already exists. Skipping creation.");
+      return;
+    }
     await queryRunner.createTable(
       new Table({
         name: "product_review",
@@ -49,6 +54,7 @@ export class CreateProductReview1685312235425 implements MigrationInterface {
       }),
       true
     );
+    console.log("✅ Table 'product_review' created");
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
