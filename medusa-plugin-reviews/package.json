@@ -1,6 +1,6 @@
 {
   "name": "@ozzaim/medusa-plugin-product-reviews",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A product review plugin for Medusa v1 that allows customers to leave reviews and ratings for products, including admin UI for moderation.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,7 @@
     "admin"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p ./tsconfig.json",
     "watch": "tsc --watch"
   },
   "keywords": [
@@ -29,48 +29,36 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Aliozzaim/medusa-plugin-product-reviews.git"
+    "url": "https://github.com/Aliozzaim/medusa-plugin-product-reviews"
   },
   "bugs": {
     "url": "https://github.com/Aliozzaim/medusa-plugin-product-reviews/issues"
   },
   "homepage": "https://github.com/Aliozzaim/medusa-plugin-product-reviews#readme",
   "peerDependencies": {
-    "@medusajs/admin": ">=7.1.17",
+    "@medusajs/medusa": "^1.14.0",
+    "@medusajs/ui": "^1.0.0",
     "@medusajs/icons": "^1.0.0",
-    "@medusajs/medusa": ">=1.20.10",
-    "@medusajs/ui": "^3.0.1",
-    "medusa-react": ">=9.0.18",
-    "@tanstack/react-query": ">=4.22.0 || >=5",
-    "react": ">=18",
-    "react-dom": ">=18"
+    "medusa-react": "^9.0.4",
+    "@medusajs/admin": "^7.0.0"
   },
   "peerDependenciesMeta": {
-    "@medusajs/admin": {
+    "@medusajs/ui": {
       "optional": true
     },
     "@medusajs/icons": {
       "optional": true
     },
-    "@medusajs/ui": {
-      "optional": true
-    },
     "medusa-react": {
       "optional": true
     },
-    "@tanstack/react-query": {
-      "optional": true
-    },
-    "react": {
-      "optional": true
-    },
-    "react-dom": {
+    "@medusajs/admin": {
       "optional": true
     }
   },
   "devDependencies": {
     "@types/node": "^20.14.12",
     "@types/react": "^18.2.0",
-    "typescript": "^5.5.4"
+    "typescript": "^4.9.5"
   }
 }
