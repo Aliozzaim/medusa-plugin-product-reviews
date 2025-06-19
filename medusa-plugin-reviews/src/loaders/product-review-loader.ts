@@ -1,10 +1,11 @@
-import { MedusaContainer } from "@medusajs/medusa";
 import ProductReviewService from "../services/product-review";
+import { AwilixContainer } from "awilix";
+import { CreateProductReview1685312235425 } from "../migrations/1685312235425-CreateProductReview";
 
 export default async function loader({
   container,
 }: {
-  container: MedusaContainer;
+  container: AwilixContainer;
 }): Promise<void> {
   console.log("✅ ProductReviewPlugin initializing...");
 
@@ -15,10 +16,8 @@ export default async function loader({
     });
   });
 
-  const migration = require("../migrations/1685312235425-CreateProductReview");
   const manager = container.resolve("manager");
-  await migration.CreateProductReview1685312235425.prototype.up(
-    manager.queryRunner
-  );
+  await CreateProductReview1685312235425.prototype.up(manager.queryRunner);
+
   console.log("✅ ProductReviewPlugin migration executed");
 }
