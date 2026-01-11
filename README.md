@@ -1,6 +1,6 @@
 # Medusa Product Review Plugin
 
-A plugin for [Medusa](https://medusajs.com/) that enables product reviews in your e-commerce store.
+A plugin for [Medusa](https://medusajs.com/) that enables product reviews in your e-commerce store
 
 ## Features
 
